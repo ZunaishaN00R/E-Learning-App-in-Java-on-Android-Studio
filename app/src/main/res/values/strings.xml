@@ -2,4 +2,9 @@
     <string name="app_name">Engage.Educate.Elevate</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_tab">Home</string>
+    <string name="quiz_tab">Quiz</string>
+    <string name="code_tab">Code</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

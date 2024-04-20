@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home_tab" />
+    <item android:id="@id/code"
+        android:icon="@drawable/baseline_code_24"
+        android:title="@string/code_tab" />
+    <item android:id="@id/quiz"
+        android:icon="@drawable/baseline_quiz_24"
+        android:title="@string/quiz_tab" />
+
+</menu>
