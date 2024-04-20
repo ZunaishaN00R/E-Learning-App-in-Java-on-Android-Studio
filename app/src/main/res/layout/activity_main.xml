@@ -8,9 +8,14 @@
     android:id="@+id/my_drawer"
     tools:context=".MainActivity">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
 
         <fragment
             android:id="@+id/main_fragment"
@@ -45,6 +50,7 @@
         android:fitsSystemWindows="true"
         android:layout_gravity="start"
         app:menu="@menu/nav_drawer"
+        app:headerLayout="@layout/nav_header_layout"
         app:itemTextAppearance="?android:attr/textAppearanceMedium"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
