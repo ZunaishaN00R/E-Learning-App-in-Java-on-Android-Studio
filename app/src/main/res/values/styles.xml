@@ -1,0 +1,15 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/steel_gray</item>
+        <item name="colorPrimaryDark">@color/purple</item>
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <!-- Theme without action bar -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

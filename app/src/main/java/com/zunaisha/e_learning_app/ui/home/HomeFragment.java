@@ -1,7 +1,9 @@
 package com.zunaisha.e_learning_app.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,13 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zunaisha.e_learning_app.R;
+import com.zunaisha.e_learning_app.chaptertopics.TopicActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,11 +59,44 @@ public class HomeFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    CardView heading1,heading2,heading3,heading4,heading5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        heading1 = view.findViewById(R.id.heading1);
+        heading2 = view.findViewById(R.id.heading2);
+        heading3 = view.findViewById(R.id.heading3);
+        heading4 = view.findViewById(R.id.heading4);
+        heading5 = view.findViewById(R.id.heading5);
+
+        heading1.setOnClickListener(this);
+        heading2.setOnClickListener(this);
+        heading3.setOnClickListener(this);
+        heading4.setOnClickListener(this);
+        heading5.setOnClickListener(this);
+
+
+        return view;
     }
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(getContext(), TopicActivity.class);
+        if (view.getId() == R.id.heading1) {
+            intent.putExtra("chapterName", "heading1");
+        } else if (view.getId() == R.id.heading2) {
+            intent.putExtra("chapterName", "heading2");
+        } else if (view.getId() == R.id.heading3) {
+            intent.putExtra("chapterName", "heading3");
+        } else if (view.getId() == R.id.heading4) {
+            intent.putExtra("chapterName", "heading4");
+        } else if (view.getId() == R.id.heading5) {
+            intent.putExtra("chapterName", "heading5");
+        }
+        startActivity(intent);
+    }
+
 }

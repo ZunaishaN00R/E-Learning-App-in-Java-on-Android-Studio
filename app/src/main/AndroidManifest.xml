@@ -13,6 +13,26 @@
         android:theme="@style/Theme.E_Learning_App"
         tools:targetApi="31">
         <activity
+            android:name=".chapter.two.php"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.Javascript"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.Android"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.php"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.java"
+            android:exported="false" />
+        <activity
+            android:name=".chaptertopics.TopicActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
