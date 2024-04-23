@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.zunaisha.e_learning_app.R;
 import com.zunaisha.e_learning_app.chaptertopics.TopicActivity;
 
@@ -32,16 +34,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public HomeFragment() {
         // Required empty public constructor
     }
+    CardView heading1,heading2,heading3,heading4,heading5;
+    ImageView image1,image2,image3,image4,image5;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
@@ -59,7 +54,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-    CardView heading1,heading2,heading3,heading4,heading5;
+//    CardView heading1,heading2,heading3,heading4,heading5;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -72,6 +67,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         heading4 = view.findViewById(R.id.heading4);
         heading5 = view.findViewById(R.id.heading5);
 
+        image1 = view.findViewById(R.id.image1);
+        image2 = view.findViewById(R.id.image2);
+        image3 = view.findViewById(R.id.image3);
+        image4 = view.findViewById(R.id.image4);
+        image5 = view.findViewById(R.id.image5);
+
+        loadImage();
+
         heading1.setOnClickListener(this);
         heading2.setOnClickListener(this);
         heading3.setOnClickListener(this);
@@ -81,6 +84,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         return view;
     }
+
+    private void loadImage() {
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/e-learning-app-3a635.appspot.com/o/education.png?alt=media&token=cd8c93b7-9372-4305-a778-e0dc3ceae4eb")
+                .into(image1);
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/e-learning-app-3a635.appspot.com/o/globe.png?alt=media&token=8570b68d-8531-425f-89b4-a80bc52b018e")
+                .into(image2);
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/e-learning-app-3a635.appspot.com/o/laptop.png?alt=media&token=c78db2fa-61c3-4f86-a40e-a951604d145f")
+                .into(image3);
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/e-learning-app-3a635.appspot.com/o/library_globe.png?alt=media&token=884a8010-6d24-424e-977f-70b64bb4cb7a")
+                .into(image4);
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/e-learning-app-3a635.appspot.com/o/mobile.png?alt=media&token=73fe468d-e50a-464a-8f3c-80a9041b4af8")
+                .into(image5);
+    }
+
 
     @Override
     public void onClick(View view) {

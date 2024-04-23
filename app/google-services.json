@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111279804069",
+    "project_id": "e-learning-app-3a635",
+    "storage_bucket": "e-learning-app-3a635.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111279804069:android:5bfa2742e9c026a867874c",
+        "android_client_info": {
+          "package_name": "com.zunaisha.e_learning_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfD57CfwujhD5YX5YBy-0obXeNjgWfsz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

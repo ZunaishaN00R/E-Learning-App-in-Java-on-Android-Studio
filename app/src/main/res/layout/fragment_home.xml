@@ -24,10 +24,11 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/image1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/education" />
+                    android:scaleType="centerCrop"/>
+<!--                    android:src="@drawable/education" />-->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -55,10 +56,12 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical">
                 <ImageView
+                    android:id="@+id/image2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/globe"
                     android:scaleType="centerCrop"/>
+<!--                    android:src="@drawable/globe"-->
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -84,10 +87,12 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical">
                 <ImageView
+                    android:id="@+id/image3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/laptop"
                     android:scaleType="centerCrop"/>
+<!--                    android:src="@drawable/laptop"-->
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -113,10 +118,11 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical">
                 <ImageView
+                    android:id="@+id/image4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/library_globe"
                     android:scaleType="centerCrop"/>
+<!--                android:src="@drawable/library_globe"-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -142,10 +148,12 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="vertical">
                 <ImageView
+                    android:id="@+id/image5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/mobile"
                     android:scaleType="centerCrop"/>
+<!--                    android:src="@drawable/mobile"-->
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
