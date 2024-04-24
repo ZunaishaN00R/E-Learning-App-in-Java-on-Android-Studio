@@ -11,93 +11,40 @@ import io.github.kbiakov.codeview.highlight.Font;
 
 public class CodeActivity extends AppCompatActivity {
     CodeView codeView;
-    String codeData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code);
         codeView = (CodeView) findViewById(R.id.code_view);
-        codeData = "package io.github.kbiakov.codeviewexample;\n" +
+        String adjacencyMatrixCode = "class GraphAdjacencyMatrix:\n" +
+                "    def __init__(self, num_vertices):\n" +
+                "        self.num_vertices = num_vertices\n" +
+                "        self.matrix = [[0] * num_vertices for _ in range(num_vertices)]\n" +
+                "    \n" +
+                "    def add_edge(self, v1, v2):\n" +
+                "        if 0 <= v1 < self.num_vertices and 0 <= v2 < self.num_vertices:\n" +
+                "            self.matrix[v1][v2] = 1\n" +
+                "            self.matrix[v2][v1] = 1\n" +
+                "    \n" +
+                "    # Other methods...\n";
+
+        String adjacencyListCode = "\nfrom collections import defaultdict\n" +
                 "\n" +
-                "import android.os.Bundle;\n" +
-                "import android.support.annotation.Nullable;\n" +
-                "import android.support.v7.app.AppCompatActivity;\n" +
-                "import android.util.Log;\n" +
-                "\n" +
-                "import org.jetbrains.annotations.NotNull;\n" +
-                "\n" +
-                "import io.github.kbiakov.codeview.CodeView;\n" +
-                "import io.github.kbiakov.codeview.OnCodeLineClickListener;\n" +
-                "import io.github.kbiakov.codeview.adapters.CodeWithDiffsAdapter;\n" +
-                "import io.github.kbiakov.codeview.adapters.Options;\n" +
-                "import io.github.kbiakov.codeview.highlight.ColorTheme;\n" +
-                "import io.github.kbiakov.codeview.highlight.ColorThemeData;\n" +
-                "import io.github.kbiakov.codeview.highlight.Font;\n" +
-                "import io.github.kbiakov.codeview.highlight.FontCache;\n" +
-                "import io.github.kbiakov.codeview.views.DiffModel;\n" +
-                "\n" +
-                "public class ListingsActivity extends AppCompatActivity {\n" +
-                "\n" +
-                "    @Override\n" +
-                "    protected void onCreate(@Nullable Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_listings);\n" +
-                "\n" +
-                "        final CodeView codeView = (CodeView) findViewById(R.id.code_view);\n" +
-                "\n" +
-                "        /*\n" +
-                "         * 1: set code content\n" +
-                "         */\n" +
-                "\n" +
-                "        // auto language recognition\n" +
-                "        codeView.setCode(getString(R.string.listing_js));\n" +
-                "\n" +
-                "        // specify language for code listing\n" +
-                "        codeView.setCode(getString(R.string.listing_py), \"py\");\n" +
-                "    }\n" +
-                "package io.github.kbiakov.codeviewexample;\n" +
-                "\n" +
-                "import android.os.Bundle;\n" +
-                "import android.support.annotation.Nullable;\n" +
-                "import android.support.v7.app.AppCompatActivity;\n" +
-                "import android.util.Log;\n" +
-                "\n" +
-                "import org.jetbrains.annotations.NotNull;\n" +
-                "\n" +
-                "import io.github.kbiakov.codeview.CodeView;\n" +
-                "import io.github.kbiakov.codeview.OnCodeLineClickListener;\n" +
-                "import io.github.kbiakov.codeview.adapters.CodeWithDiffsAdapter;\n" +
-                "import io.github.kbiakov.codeview.adapters.Options;\n" +
-                "import io.github.kbiakov.codeview.highlight.ColorTheme;\n" +
-                "import io.github.kbiakov.codeview.highlight.ColorThemeData;\n" +
-                "import io.github.kbiakov.codeview.highlight.Font;\n" +
-                "import io.github.kbiakov.codeview.highlight.FontCache;\n" +
-                "import io.github.kbiakov.codeview.views.DiffModel;\n" +
-                "\n" +
-                "public class ListingsActivity extends AppCompatActivity {\n" +
-                "\n" +
-                "    @Override\n" +
-                "    protected void onCreate(@Nullable Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_listings);\n" +
-                "\n" +
-                "        final CodeView codeView = (CodeView) findViewById(R.id.code_view);\n" +
-                "\n" +
-                "        /*\n" +
-                "         * 1: set code content\n" +
-                "         */\n" +
-                "\n" +
-                "        // auto language recognition\n" +
-                "        codeView.setCode(getString(R.string.listing_js));\n" +
-                "\n" +
-                "        // specify language for code listing\n" +
-                "        codeView.setCode(getString(R.string.listing_py), \"py\");\n" +
-                "    }\n" +
-                "}";
+                "class GraphAdjacencyList:\n" +
+                "    def __init__(self):\n" +
+                "        self.adj_list = defaultdict(list)\n" +
+                "    \n" +
+                "    def add_edge(self, v1, v2):\n" +
+                "        self.adj_list[v1].append(v2)\n" +
+                "        self.adj_list[v2].append(v1)\n" +
+                "    \n" +
+                "    # Other methods...\n";
+
+        String combinedCode = adjacencyMatrixCode + "\n\n" + adjacencyListCode;
         codeView.setCode("codeData");
         codeView.setOptions(Options.Default.get(this)
-                .withLanguage("java")
-                .withCode(codeData)
+                .withLanguage("python")
+                .withCode(combinedCode)
                 .withTheme(ColorTheme.MONOKAI)
                 .withFont(Font.Consolas));
     }
