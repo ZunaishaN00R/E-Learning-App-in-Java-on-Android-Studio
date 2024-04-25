@@ -31,7 +31,8 @@ public class CodeCategory extends AppCompatActivity {
         programs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(CodeCategory.this,CodeActivity.class);
+                Intent intent= new Intent(CodeCategory.this, CodeActivity.class);
+                intent.putExtra("position",list[position]);
                 startActivity(intent);
             }
         });
@@ -47,7 +48,6 @@ public class CodeCategory extends AppCompatActivity {
                 "Implement breadth-first search (BFS) for a graph using a queue",
                 "Write a function to detect cycles in a directed graph using DFS",
                 "Implement cycle detection in an undirected graph using DFS or Union-Find (Disjoint Set Union) data structure",
-                "Write a program to find all connected components in an undirected graph",
                 "Implement Kosaraju's algorithm to find strongly connected components in a directed graph",
                 "Implement Dijkstra's algorithm to find the shortest path from a source node to all other nodes in a weighted graph",
                 "Implement the Bellman-Ford algorithm to find the shortest path in a graph with negative weight edges",
