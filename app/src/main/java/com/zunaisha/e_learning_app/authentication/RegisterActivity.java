@@ -70,18 +70,13 @@ public class RegisterActivity extends AppCompatActivity {
         userImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= 1){
+                if (Build.VERSION.SDK_INT >= 32){
                     checkAndRequestPermission();
                 }
                 else {
                     openGallery();
                 }
             }
-
-//            @Override
-//            public void onClick(View v) {
-//                checkAndRequestPermission();
-//            }
 
             private void checkAndRequestPermission() {
                 if (ContextCompat.checkSelfPermission(RegisterActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
@@ -138,8 +133,10 @@ public class RegisterActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
-                                    Toast.makeText(RegisterActivity.this,"Registered Successful",Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(RegisterActivity.this,"Registered Successful",Toast.LENGTH_SHORT).show();
+
                                     updateUI(name,pickedImgUri,auth.getCurrentUser());
+                                    openProfile();
                                     regProgressBar.setVisibility(View.GONE);
                                 }
                                 else {
@@ -150,6 +147,12 @@ public class RegisterActivity extends AppCompatActivity {
                         });
         }
     }
+
+    private void openProfile() {
+        startActivity(new Intent(RegisterActivity.this,ProfileActivity.class));
+        finish();
+    }
+
     private void updateUI(String name, Uri pickedImgUri, FirebaseUser currentUser) {
         StorageReference mStorage = FirebaseStorage.getInstance().getReference().child("user_image");
         final StorageReference imgFilePath = mStorage.child(pickedImgUri.getLastPathSegment());
