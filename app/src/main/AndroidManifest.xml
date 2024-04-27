@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zunaisha.e_learning_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
-        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        tools:replace="android:appComponentFactory"
         android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo"
@@ -13,7 +21,17 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.E_Learning_App"
-        tools:targetApi="31" >
+        tools:replace="android:appComponentFactory"
+        tools:targetApi="31">
+        <activity
+            android:name=".authentication.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".authentication.RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.code.CodeActivity"
             android:exported="false" />
@@ -28,10 +46,9 @@
             android:exported="false" />
         <activity
             android:name=".chapter.one.Android"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".chapter.one.php"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".chapter.one.php" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.one.java"
             android:exported="false" />
@@ -45,7 +62,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -13,12 +13,16 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.zunaisha.e_learning_app.authentication.LoginActivity;
+import com.zunaisha.e_learning_app.authentication.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
@@ -47,18 +51,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         navController = Navigation.findNavController(this, R.id.main_fragment);
-//        NavigationUI.setupWithNavController(navigationView, navController);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.option_menu,menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (toggle.onOptionsItemSelected(item))
             return true;
+        if (item.getItemId() == R.id.profile){
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+        }
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int itemId = menuItem.getItemId();
@@ -79,31 +90,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//        return false;
-//    }
-
-
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//
-//
-////        switch (menuItem.getItemId()){
-////            case R.id.pdf:
-////                Toast.makeText(this, "EBook", Toast.LENGTH_SHORT).show();
-////                break;
-////            case R.id.share:
-////                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
-////                break;
-////            case R.id.rate:
-////                Toast.makeText(this, "Rate", Toast.LENGTH_SHORT).show();
-////                break;
-////            case R.id.about:
-////                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
-////                break;
-////        }
-//        return true;
-//    }
 }
