@@ -70,13 +70,18 @@ public class RegisterActivity extends AppCompatActivity {
         userImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= 32){
+                if (Build.VERSION.SDK_INT >= 1){
                     checkAndRequestPermission();
                 }
                 else {
                     openGallery();
                 }
             }
+
+//            @Override
+//            public void onClick(View v) {
+//                checkAndRequestPermission();
+//            }
 
             private void checkAndRequestPermission() {
                 if (ContextCompat.checkSelfPermission(RegisterActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
@@ -98,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void openLogin() {
         startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-        finish();
+//        finish();
     }
 
 
