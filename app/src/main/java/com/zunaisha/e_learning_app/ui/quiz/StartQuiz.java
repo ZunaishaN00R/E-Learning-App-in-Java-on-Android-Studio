@@ -116,7 +116,7 @@ public class StartQuiz extends AppCompatActivity {
                        }
                    });
                }else{
-                   Toast.makeText(StartQuiz.this, "No DataFound", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(StartQuiz.this, "No Data Found", Toast.LENGTH_SHORT).show();
                }
            }
 
@@ -178,15 +178,16 @@ public class StartQuiz extends AppCompatActivity {
 
                     @Override
                     public void onAnimationEnd(Animator animator) {
-                        try{
-                            ((TextView)view).setText(data);
-                            indicator.setText(position+ "/" + list.size());
-                        }catch (ClassCastException e){
-                            ((Button)view).setText(data);
+                        if(value == 0) {
+                            try {
+                                ((TextView) view).setText(data);
+                                indicator.setText(position + "/" + list.size());
+                            } catch (ClassCastException e) {
+                                ((Button) view).setText(data);
+                            }
+                            view.setTag(data);
+                            loadQuestion(view, 1, data);
                         }
-                        view.setTag(data);
-                        loadQuestion(view,1,data);
-
                     }
 
                     @Override
