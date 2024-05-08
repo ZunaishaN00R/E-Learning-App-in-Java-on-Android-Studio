@@ -4,119 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".ui.quiz.StartQuiz">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/question"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:text="Question"
+        android:textColor="@color/textColor"
+        android:textSize="18sp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="5/10"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Option 1"
+            android:textAllCaps="false" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Option 2"
+            android:textAllCaps="false" />
 
-                <TextView
-                    android:id="@+id/question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:padding="16dp"
-                    android:text="Question"
-                    android:textColor="@color/textColor"
-                    android:textSize="18sp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Option 3"
+            android:textAllCaps="false" />
 
-                <TextView
-                    android:id="@+id/indicator"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="3dp"
-                    android:text="5/10"
-                    android:textColor="@color/textColor"
-                    android:textSize="16sp"
-                    android:textStyle="italic" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Option 4"
+            android:textAllCaps="false" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    </LinearLayout>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option 1"
-                    android:textAllCaps="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option 2"
-                    android:textAllCaps="false" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Next"
+            android:textAllCaps="false" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option 3"
-                    android:textAllCaps="false" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/share_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Share"
+            android:textAllCaps="false" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option 4"
-                    android:textAllCaps="false" />
+    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/share_btn"
-                        android:layout_width="137dp"
-                        android:layout_height="68dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="90dp"
-                        android:backgroundTint="#FA7074"
-                        android:text="Share"
-                        android:textAllCaps="false" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/next_btn"
-                        android:layout_width="137dp"
-                        android:layout_height="68dp"
-                        android:backgroundTint="#848484"
-                        android:text="Next"
-                        android:textAllCaps="false" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 </LinearLayout>
