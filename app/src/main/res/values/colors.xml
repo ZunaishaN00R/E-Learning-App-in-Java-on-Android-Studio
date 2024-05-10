@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_green">#004764</color>
+    <color name="green">#004e00</color>
     <color name="pink">#FF007F</color>
     <color name="purple">#C154C1</color>
     <color name="bronze">#CD7F32</color>
@@ -10,5 +11,6 @@
     <color name="steel_gray">#71797E</color>
     <color name="brightblue">#0096FF</color>
     <color name="textColor">#313131</color>
+
 
 </resources>

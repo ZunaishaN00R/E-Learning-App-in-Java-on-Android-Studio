@@ -40,7 +40,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:fontFamily="@font/extralightitalic"
-                    android:text="Heading1"/>
+                    android:text="Subject 1"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -72,7 +72,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:fontFamily="@font/extralightitalic"
-                    android:text="Heading2"/>
+                    android:text="Subject 2"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -103,7 +103,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:fontFamily="@font/extralightitalic"
-                    android:text="Heading3"/>
+                    android:text="Subject 3"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -133,7 +133,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:fontFamily="@font/extralightitalic"
-                    android:text="Heading4"/>
+                    android:text="Subject 4"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -164,7 +164,7 @@
                     android:textStyle="bold"
                     android:gravity="center"
                     android:fontFamily="@font/extralightitalic"
-                    android:text="Heading5" />
+                    android:text="Subject 5" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

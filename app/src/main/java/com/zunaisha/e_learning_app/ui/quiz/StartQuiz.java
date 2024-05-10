@@ -136,12 +136,16 @@ public class StartQuiz extends AppCompatActivity {
         nextBtn.setAlpha(1);
         if (selectedOption.getText().toString().equals(list.get(position).getAnswer())) {
             selectedOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#4caf50")));
+            Toast.makeText(StartQuiz.this, "Correct Answer!", Toast.LENGTH_SHORT).show();
+            score++; // Increase score if the answer is correct
         } else {
             selectedOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ff0000")));
             Button correctOption = container.findViewWithTag(list.get(position).getAnswer());
             correctOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#4caf50")));
+            Toast.makeText(StartQuiz.this, "Incorrect Answer!", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private void enabled(Boolean enable) {
         for (int i = 0; i < 4; i++) {
@@ -174,9 +178,6 @@ public class StartQuiz extends AppCompatActivity {
 
                             loadQuestion(container.getChildAt(count), 0, option);
                             count++;
-                            Toast.makeText(StartQuiz.this, "Clicked", Toast.LENGTH_SHORT).show();
-
-
                         }
                     }
 

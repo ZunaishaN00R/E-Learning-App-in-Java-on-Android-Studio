@@ -26,6 +26,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.zunaisha.e_learning_app.authentication.LoginActivity;
 import com.zunaisha.e_learning_app.authentication.ProfileActivity;
 import com.zunaisha.e_learning_app.authentication.RegisterActivity;
+import com.zunaisha.e_learning_app.leaderboard.LeaderboardActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
@@ -43,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.navigation_view);
         toolbar = findViewById(R.id.toolbar);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        
-
 
         setSupportActionBar(toolbar);
         toggle = new ActionBarDrawerToggle(this, drawerLayout , R.string.open , R.string.close);
@@ -88,8 +87,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int itemId = menuItem.getItemId();
-
-        if (itemId == R.id.pdf) {
+        if (itemId == R.id.leaderboard) {
+            startActivity(new Intent(MainActivity.this, LeaderboardActivity.class));
+            Toast.makeText(this, "leaderboard", Toast.LENGTH_SHORT).show();
+        } else if (itemId == R.id.pdf) {
             Toast.makeText(this, "EBook", Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.share) {
             Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
@@ -97,8 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Rate", Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.about) {
             Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
-        }
-        else{
+        } else {
             Toast.makeText(this, "Click Wrong", Toast.LENGTH_SHORT).show();
         }
 

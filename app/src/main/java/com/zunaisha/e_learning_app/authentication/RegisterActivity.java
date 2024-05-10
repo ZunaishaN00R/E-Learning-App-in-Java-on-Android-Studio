@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.Firebase;
@@ -29,6 +30,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -37,10 +40,13 @@ import android.Manifest;
 
 import com.zunaisha.e_learning_app.R;
 
+import java.util.HashMap;
+
 public class RegisterActivity extends AppCompatActivity {
     EditText regName,regEmail,regPassword;
     Button regButton,loginBtn;
     private FirebaseAuth auth;
+    DatabaseReference reference;
     ImageView userImage;
     static int REQUEST_CODE =1;
     Uri pickedImgUri;
@@ -59,6 +65,8 @@ public class RegisterActivity extends AppCompatActivity {
         regProgressBar.setVisibility(View.GONE);
         auth = FirebaseAuth.getInstance();
         loginBtn = findViewById(R.id.reg_login_btn);
+
+        reference = FirebaseDatabase.getInstance().getReference().child("Score");
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,6 +175,21 @@ public class RegisterActivity extends AppCompatActivity {
                                 .setPhotoUri(uri)
                                 .build();
                         currentUser.updateProfile(changeRequest);
+                        HashMap map = new HashMap();
+                        map.put("name",name);
+                        map.put("image",uri.toString());
+                        map.put("score",0);
+                        reference.child(currentUser.getUid()).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(RegisterActivity.this,"Data Inserted",Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(RegisterActivity.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
                 });
             }
