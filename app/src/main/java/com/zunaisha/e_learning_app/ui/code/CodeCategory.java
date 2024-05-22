@@ -41,8 +41,6 @@ public class CodeCategory extends AppCompatActivity {
 
     private void loadCategory() {
         final String chap1[]={
-                "Chapter 1",
-                "Graphs",
                 "Write code to represent a graph using an adjacency matrix and an adjacency list",
                 "Implement depth-first search (DFS) for a graph recursively",
                 "Implement breadth-first search (BFS) for a graph using a queue",
@@ -67,8 +65,6 @@ public class CodeCategory extends AppCompatActivity {
                 "Implement a function to check if two graphs are isomorphic (structurally identical)"
         };
         final String chap2[]={
-                "Chapter 2",
-                "Stacks",
                 "Implement a stack using arrays in your preferred programming language, including push and pop operations",
                 "Write a function to check if a given string of parentheses is balanced using a stack",
                 "Implement a stack-based calculator that can evaluate arithmetic expressions with operators like +, -, *, /",
@@ -86,8 +82,6 @@ public class CodeCategory extends AppCompatActivity {
                 "Implement a stack data structure that supports push, pop, and findMiddle() operations in O(1) time complexity"
         };
         final String chap3[]={
-                "Chapter 3",
-                "Arrays",
                 "Write a function to find the largest element in an array of integers.",
                 "Implement a function to compute the sum of all elements in an array of integers.",
                 "Write a program to reverse the elements of an array in-place.",
@@ -99,14 +93,8 @@ public class CodeCategory extends AppCompatActivity {
                 "Compute an array where each element is the product of all elements of the input array except itself.",
                 "Find any peak element in an array. A peak element is an element that is greater than its neighbors.",
                 "Find the contiguous subarray within an array that has the largest sum.",
-                "Given an array of integers, rearrange the array so that all even numbers come before the odd numbers.",
-                "Implement the next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.",
-                "In a party of n people, there is one celebrity who knows nobody but is known by everyone. Find the celebrity in linear time.",
-                "Given an array of integers and a target sum, return indices of the two numbers such that they add up to the target."
         };
         final String chap4[]={
-                "Chapter 4",
-                "Linked List",
                 "Implement a singly linked list from scratch in your preferred programming language.",
                 "Write a function to insert a new node at the beginning of a linked list.",
                 "Reverse a linked list iteratively.",
@@ -117,40 +105,21 @@ public class CodeCategory extends AppCompatActivity {
                 "Check if a linked list is palindrome (reads the same forwards and backwards).",
                 "Given two linked lists representing two non-negative numbers, add the numbers and return the sum as a linked list.",
                 "Sort a linked list using merge sort algorithm.",
-                "Delete a node (except the tail) in a singly linked list, given only access to that node.",
-                "Clone a linked list with next and random pointer. Each node in the linked list has two pointers, next and random.",
-                "Given a linked list, swap every two adjacent nodes and return its head.",
-                "Detect the intersection point of two linked lists. If the lists do not intersect, return null.",
-                "Rotate a linked list to the right by k places, where k is a non-negative integer."
         };
         final String chap5[]={
-                "Chapter 5",
-                "Queue",
-                "Implement a queue using an array in your preferred programming language.",
-                "Implement a queue using a linked list.",
-                "Design a circular queue (with a fixed size) and implement the enqueue and dequeue operations.",
-                "Check if a queue is empty.",
-                "Implement a priority queue using a min-heap or max-heap.",
                 "Implement a queue using two stacks.",
                 "Write a program to reverse the first k elements of a queue.",
                 "Implement a recent counter using a queue. The counter should keep track of the last n requests.",
                 "Design a queue that supports push, pop, front, and getMin operations in O(1) time.",
                 "Implement a queue using a combination of stacks and optimize the enqueue and dequeue operations.",
-                "Design a data structure to support the following operations: insert(val), remove(), getRandom(). All operations should have an average O(1) time complexity.",
-                "Implement a circular deque (double-ended queue) with the following methods: insertFront(), insertLast(), deleteFront(), deleteLast(), getFront(), getLast().",
+                "Design a data structure to support the following operations: insert(val), remove(), getRandom().",
+                "insertFront(), insertLast(), deleteFront(), deleteLast(), getFront(), getLast().",
                 "Implement a queue using two priority queues (one for enqueue and one for dequeue operations).",
-                "Given a matrix representing a grid with obstacles, find the shortest path from the top-left corner to the bottom-right corner using a queue (Breadth-First Search).",
-                "Implement a queue with a fixed-size limit. If the queue is full and a new element is added, the oldest element should be dequeued automatically."
+                "Given a matrix representing a grid with obstacles,(Breadth-First Search).",
+                "Implement a queue with a fixed-size limit."
         };
         final String chap6[]={
-                "Chapter 6",
-                "Searching Algorithm",
-                "Implement a linear search algorithm to find the first occurrence of a key in an array.",
-                "Implement a binary search algorithm to find a target element in a sorted array.",
-                "Write a function to perform an interpolation search on a sorted array of integers.",
-                "Implement a recursive binary search algorithm in a sorted array.",
-                "Find the first and last occurrence of a target element in a sorted array using binary search.",
-                "Implement a breadth-first search (BFS) algorithm to search for a target node in a graph.",
+                "Implement a breadth-first search (BFS) algorithm.",
                 "Perform a depth-first search (DFS) on a graph to find a specific node.",
                 "Find the peak element in an array using a binary search approach.",
                 "Search for a substring in a given string using the Knuth-Morris-Pratt (KMP) algorithm.",
@@ -162,13 +131,6 @@ public class CodeCategory extends AppCompatActivity {
                 "Implement a jump search algorithm to find the index of a target element in a sorted array."
         };
         final String chap7[]={
-                "Chapter 7",
-                "Sorting Algorithm",
-                "Implement the bubble sort algorithm in your preferred programming language.",
-                "Write a function to perform selection sort on an array of integers.",
-                "Implement the insertion sort algorithm for sorting an array of integers.",
-                "Sort an array of integers using the merge sort algorithm.",
-                "Implement the quicksort algorithm to sort an array of integers.",
                 "Write a function to perform heap sort on an array of integers.",
                 "Implement the counting sort algorithm for sorting an array of integers with a known range.",
                 "Sort an array of integers using the radix sort algorithm.",
@@ -181,8 +143,6 @@ public class CodeCategory extends AppCompatActivity {
                 "Write a function to perform pancake sorting on an array of integers."
         };
         final String chap8[]={
-                "Chapter 8",
-                "Tree",
                 "Implement a binary search tree (BST) from scratch in your preferred programming language.",
                 "Write a function to perform an inorder traversal of a binary tree (left, root, right).",
                 "Find the height (or maximum depth) of a binary tree.",
@@ -193,11 +153,6 @@ public class CodeCategory extends AppCompatActivity {
                 "Count the number of leaf nodes in a binary tree (nodes with no children).",
                 "Implement a function to print the nodes of a binary tree level by level (breadth-first traversal).",
                 "Convert a binary search tree (BST) into a sorted doubly linked list.",
-                "Given a binary tree, check if it is balanced. A balanced tree is defined as a tree where the heights of the two subtrees of any node never differ by more than one.",
-                "Find the maximum path sum in a binary tree. The path may start and end at any node in the tree.",
-                "Given the preorder and inorder traversal sequences of a binary tree, construct the tree.",
-                "Find the vertical order traversal of a binary tree. Nodes with the same horizontal distance are ordered from top to bottom.",
-                "Given two binary trees, determine if they are identical (same structure and same node values)."
         };
         String category = getIntent().getStringExtra("codeCategory");
         switch (category){
