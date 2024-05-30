@@ -13,7 +13,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.zunaisha.e_learning_app.R;
+import com.zunaisha.e_learning_app.chapter.five.Javascript;
+import com.zunaisha.e_learning_app.chapter.one.Android;
 import com.zunaisha.e_learning_app.chapter.one.java;
+import com.zunaisha.e_learning_app.chapter.two.php;
 
 public class TopicActivity extends AppCompatActivity {
 
@@ -114,13 +117,13 @@ public class TopicActivity extends AppCompatActivity {
                 startActivity(new Intent(TopicActivity.this, java.class));
                 break;
             case "Android":
-                startActivity(new Intent(TopicActivity.this, java.class));
+                startActivity(new Intent(TopicActivity.this, Android.class));
                 break;
             case "PHP":
-                startActivity(new Intent(TopicActivity.this, java.class));
+                startActivity(new Intent(TopicActivity.this, php.class));
                 break;
             case "Javascript":
-                startActivity(new Intent(TopicActivity.this, java.class));
+                startActivity(new Intent(TopicActivity.this, Javascript.class));
                 break;
         }
     }
