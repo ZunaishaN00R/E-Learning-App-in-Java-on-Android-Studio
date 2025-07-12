@@ -187,9 +187,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Zunaisha N00R**
 - GitHub: [@ZunaishaN00R](https://github.com/ZunaishaN00R)
 
-**Usman A5809**
+**Usmana5809**
 - GitHub: [@usmana5809](https://github.com/usmana5809)
-- Project: [Screen Mirror Client](https://github.com/usmana5809/screen-mirror-client)
 
 ## 🙏 Acknowledgments
 
