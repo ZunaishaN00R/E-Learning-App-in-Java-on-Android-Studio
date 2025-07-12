@@ -202,7 +202,7 @@ Firebase Database:
 
 *Active quiz-taking interface with multiple choice questions and real-time feedback*
 
-![Question with Code Templates](assests/question_with_solution of_code_templates.png)
+![Question with Code Templates](assests/qquestion_with_solution of_code_templates.png)
 
 *Programming questions featuring code examples with syntax highlighting and explanations*
 
