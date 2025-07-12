@@ -171,6 +171,7 @@ Firebase Database:
 *Individual course page displaying chapter structure and learning modules*
 
 ![Subjects Topics](assests/subjects_topics.png)
+
 *Detailed topic breakdown within each subject showing specific learning areas*
 
 ### 🔐 User Authentication
@@ -208,6 +209,7 @@ Firebase Database:
 ### 🏆 Leaderboard & Scores
 
 ![Leaderboard Scores](assests/leaderboard_scores.png)
+
 *Real-time leaderboard displaying user rankings, scores, and profile pictures*
 
 ![UI to Show Leaderboard Registration](assests/ui_to_show_yo_open_leaderbporad_register_itsef for_quiz.png)
