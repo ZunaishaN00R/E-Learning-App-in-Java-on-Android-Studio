@@ -202,7 +202,7 @@ Firebase Database:
 
 *Active quiz-taking interface with multiple choice questions and real-time feedback*
 
-![Question with Code Templates](assests/qquestion_with_solution of_code_templates.png)
+![Question with Code Templates](assests/question_with_solution_of_code_templates.png)
 
 *Programming questions featuring code examples with syntax highlighting and explanations*
 
@@ -212,7 +212,7 @@ Firebase Database:
 
 *Real-time leaderboard displaying user rankings, scores, and profile pictures*
 
-![UI to Show Leaderboard Registration](assests/ui_to_show_yo_open_leaderbporad_register_itsef for_quiz.png)
+![UI to Show Leaderboard Registration](assests/ui_to_show_yo_open_leaderbporad_register_itsef_for_quiz.png)
 
 *Leaderboard access interface with registration options and score tracking features*
 
