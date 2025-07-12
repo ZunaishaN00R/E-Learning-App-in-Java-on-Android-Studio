@@ -57,23 +57,25 @@ A comprehensive educational Android application built with Java and Android Stud
 
 ## 📱 Screenshots
 
-### 🏠 Home Screen
-![Home Screen](app/src/main/res/drawable/book.png)
+### 🏠 Home & Navigation
+![Subjects Overview](assests/subjects.png)
+![Subject Course Template](assests/subject_course_template.png)
+![Subjects Topics](assests/subjects_topics.png)
 
-### 🔐 Login & Registration
-![Login Screen](app/src/main/res/drawable/login.jpeg)
+### 🔐 User Authentication
+![User Registration](assests/registeer_fir_new_user.png)
+![Successful Registration](assests/successful_register.png)
+![Login for Quiz](assests/login_for_quiz.png)
 
 ### 🎯 Quiz System
-![Quiz Interface](app/src/main/res/drawable/quiz.png)
+![Start Quiz Page](assests/start_quiz_page.png)
+![Attempt Quiz Subject](assests/attempt_quiz_subject.png)
+![User Attempt Quiz Questions](assests/user_attempt_its_quizs_question.png)
+![Question with Code Templates](assests/question_with_solution of_code_templates.png)
 
-### 🏆 Leaderboard
-![Leaderboard](app/src/main/res/drawable/leaderboard.png)
-
-### 👥 User Profiles
-![User Avatar 1](app/src/main/res/drawable/avatar1.jpg)
-![User Avatar 2](app/src/main/res/drawable/avatar2.jpg)
-![User Avatar 3](app/src/main/res/drawable/avatar3.jpg)
-![User Avatar 4](app/src/main/res/drawable/avatar4.jpg)
+### 🏆 Leaderboard & Scores
+![Leaderboard Scores](assests/leaderboard_scores.png)
+![UI to Show Leaderboard Registration](assests/ui_to_show_yo_open_leaderbporad_register_itsef for_quiz.png)
 
 ## 🚀 Installation
 
