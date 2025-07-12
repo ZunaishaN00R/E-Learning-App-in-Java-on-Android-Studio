@@ -71,8 +71,8 @@ A comprehensive educational Android application built with Java and Android Stud
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/e-learning-app.git
-   cd e-learning-app
+   git clone https://github.com/ZunaishaN00R/E-Learning-App-in-Java-on-Android-Studio.git
+   cd E-Learning-App-in-Java-on-Android-Studio
    ```
 
 2. **Configure Firebase**
