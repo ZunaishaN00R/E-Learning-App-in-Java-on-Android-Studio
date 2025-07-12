@@ -55,47 +55,7 @@ A comprehensive educational Android application built with Java and Android Stud
 - **Code Display**: CodeView-Android library
 - **Build System**: Gradle with Kotlin DSL
 
-## 📱 Screenshots
 
-### 🏠 Home & Navigation
-![Subjects Overview](assests/subjects.png)
-*Main dashboard showing all available programming subjects and courses with clean grid layout*
-
-![Subject Course Template](assests/subject_course_template.png)
-*Individual course page displaying chapter structure and learning modules*
-
-![Subjects Topics](assests/subjects_topics.png)
-*Detailed topic breakdown within each subject showing specific learning areas*
-
-### 🔐 User Authentication
-![User Registration](assests/registeer_fir_new_user.png)
-*New user registration form with email, password, and profile picture upload*
-
-![Successful Registration](assests/successful_register.png)
-*Confirmation screen displayed after successful user account creation*
-
-![Login for Quiz](assests/login_for_quiz.png)
-*User login interface with email and password fields for quiz access*
-
-### 🎯 Quiz System
-![Start Quiz Page](assests/start_quiz_page.png)
-*Quiz initialization screen with subject selection and start options*
-
-![Attempt Quiz Subject](assests/attempt_quiz_subject.png)
-*Subject-specific quiz interface showing available topics and difficulty levels*
-
-![User Attempt Quiz Questions](assests/user_attempt_its_quizs_question.png)
-*Active quiz-taking interface with multiple choice questions and real-time feedback*
-
-![Question with Code Templates](assests/question_with_solution of_code_templates.png)
-*Programming questions featuring code examples with syntax highlighting and explanations*
-
-### 🏆 Leaderboard & Scores
-![Leaderboard Scores](assests/leaderboard_scores.png)
-*Real-time leaderboard displaying user rankings, scores, and profile pictures*
-
-![UI to Show Leaderboard Registration](assests/ui_to_show_yo_open_leaderbporad_register_itsef for_quiz.png)
-*Leaderboard access interface with registration options and score tracking features*
 
 ## 🚀 Installation
 
@@ -197,6 +157,62 @@ Firebase Database:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## 📱 Screenshots
+
+### 🏠 Home & Navigation
+
+![Subjects Overview](assests/subjects.png)
+
+*Main dashboard showing all available programming subjects and courses with clean grid layout*
+
+![Subject Course Template](assests/subject_course_template.png)
+
+*Individual course page displaying chapter structure and learning modules*
+
+![Subjects Topics](assests/subjects_topics.png)
+*Detailed topic breakdown within each subject showing specific learning areas*
+
+### 🔐 User Authentication
+
+![User Registration](assests/registeer_fir_new_user.png)
+
+*New user registration form with email, password, and profile picture upload*
+
+![Successful Registration](assests/successful_register.png)
+
+*Confirmation screen displayed after successful user account creation*
+
+![Login for Quiz](assests/login_for_quiz.png)
+
+*User login interface with email and password fields for quiz access*
+
+### 🎯 Quiz System
+
+![Start Quiz Page](assests/start_quiz_page.png)
+
+*Quiz initialization screen with subject selection and start options*
+
+![Attempt Quiz Subject](assests/attempt_quiz_subject.png)
+
+*Subject-specific quiz interface showing available topics and difficulty levels*
+
+![User Attempt Quiz Questions](assests/user_attempt_its_quizs_question.png)
+
+*Active quiz-taking interface with multiple choice questions and real-time feedback*
+
+![Question with Code Templates](assests/question_with_solution of_code_templates.png)
+
+*Programming questions featuring code examples with syntax highlighting and explanations*
+
+### 🏆 Leaderboard & Scores
+
+![Leaderboard Scores](assests/leaderboard_scores.png)
+*Real-time leaderboard displaying user rankings, scores, and profile pictures*
+
+![UI to Show Leaderboard Registration](assests/ui_to_show_yo_open_leaderbporad_register_itsef for_quiz.png)
+
+*Leaderboard access interface with registration options and score tracking features*
 
 ## 📄 License
 
